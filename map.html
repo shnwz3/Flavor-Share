@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Flavour Share | Smart Map</title>
+        <link rel="stylesheet" type="text/css" href="styles/style_index.css">
+        <link rel="icon" href="../../assets/logos/title_icon.png" type="image/icon type">
+
+        <!--Google Fonts-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    </head>
+    <body>
+        <!--Navbar-->
+        <nav>
+            <ul class="menu-bar">
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="material-icons">restaurant_menu</i>Flavour Share
+                    </a>
+                </div>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#latest_recipes">Latest Recipes</a></li>
+                <li><a href="index.html#cuisines">Cuisines</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="map.html">Explore Recipes</a></li>
+                <li><a href="create_recipe.html" style="text-decoration: none;">Create Recipe</a></li>
+            </ul>
+        </nav>
+
+        <div class="map">
+            <h1>Smart Map</h1>
+            <p>Explore recipes from cuisines across the world using our <b>Smart Map</b>!</p>
+            <table>
+                <tr>
+                    <td>
+                        <img src="assets/main/map_recipes.png" alt="eurasia_map" width="700px" height="495px" usemap="#cusines">
+                        <map name="cusines">
+                            <area shape="rect" coords="513,328,607,370" href="south_indian_map.html" alt="SOUTH INDIAN" target="display_area">
+                            <area shape="rect" coords="496,250,586,303" href="north_indian_map.html" alt="NORTH INDIAN" target="display_area">
+                            <area shape="rect" coords="592,229,653,283" href="chinese_map.html" alt="CHINESE" target="display_area">
+                            <area shape="rect" coords="283,200,342,246" href="italian_map.html" alt="ITALIAN" target="display_area">
+                        </map>
+                    </td>
+                    <td>
+                        <div class="cusine-map">
+                            <iframe src="map_default.html" title="display_area" name="display_area"></iframe>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="contact-us" id="contact">
+            <h2>About Us</h2>
+            <div class="contact-card">
+                <div class="contact-item">
+                    <img src="assets/admin/admin.jpg">
+                    <h4>Shah Nawaz</h4>
+                    <p>Aicte id:STU64dcd1bf10b171692193215</p>
+                </div>
+            </div>
+            <p>© 2022 All Rights Reserved, <a href="index.html" style="color: white; font-weight: bold;">Flavour Share</a></p>
+        </div>
+    </body>
+</html>
