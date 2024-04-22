@@ -18,6 +18,21 @@
     <body>
         <!--Navbar-->
         <nav>
+            <ul class="menu-bar" style="
+             position: relative;
+                display: inline;
+                top: 0;
+                left: 500px;">
+                <li style="            
+                display: inline;
+                margin-right: 10px;"><a href="login.html">Login</a></li>
+                <li style="            
+                display: inline;
+                margin-right: 10px;"><a href="sign.html">Register</a></li>
+                
+            </ul>
+            <h3 style="color:white;left: 500px; position: relative;margin-bottom: 0;">Login to Create</h3>
+                
             <ul class="menu-bar">
                 <div class="logo">
                     <a href="index.html">
@@ -104,5 +119,13 @@
             </div>
             <p>© 2022 All Rights Reserved, <a href="index.html" style="color: white; font-weight: bold;">Flavour Share</a></p>
         </div>
+        <script>
+            window.onload = function() {
+                if (localStorage.getItem('loggedIn') === 'true') {
+                    // User is logged in, hide the login and register links
+                    document.querySelector('.menu-bar').style.display = 'none';
+                }
+            };
+            </script>
     </body>
 </html>
