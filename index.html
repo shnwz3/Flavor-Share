@@ -57,14 +57,42 @@
                 </tr>
             </table>
             
-            <h1 style="font-size: 3rem;">Search Recipes</h1>
-            <form action="" id="search_recipes">
-                <input type="search" onkeyup="searchList()" placeholder="Search for Cusines, Recipies..." id="search_key">
-                <i class="fa fa-search" onclick="searchList()"></i>
-            </form>
-            <!-- <div id="filter_options">
-                # Filter options will be inserted here by JavaScript 
-            </div> -->
+            <title>Search Recipes</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-IykBxRHkKbQIWUGqbiJwEgGVwvmPU4G132gyQZKz/QA0gyroQ7LgUfGHzcEFWhFBgdecygCbloOeANEBGUDPzw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <h1 style="font-size: 3rem;">Search Recipes</h1>
+    <form action="" id="search_recipes">
+        <input type="search" onkeyup="searchList()" placeholder="Search for Cusines, Recipies..." id="search_key">
+        <i class="fa fa-search" onclick="searchList()"></i>
+    </form>
+
+  
+
+  <div class="map">
+    <h1>Smart Map / Filter</h1>
+    <p>Explore recipes from cuisines across the world using our <b>Smart Map</b>!</p>
+    <table>
+      <tr>
+        <td>
+          <img src="assets/main/map_recipes.png" alt="eurasia_map" width="700px" height="495px" usemap="#cusines">
+          <map name="cusines">
+            <area shape="rect" coords="513,328,607,370" href="south_indian_map.html" alt="SOUTH INDIAN" target="display_area">
+            <area shape="rect" coords="496,250,586,303" href="north_indian_map.html" alt="NORTH INDIAN" target="display_area">
+            <area shape="rect" coords="592,229,653,283" href="chinese_map.html" alt="CHINESE" target="display_area">
+            <area shape="rect" coords="283,200,342,246" href="italian_map.html" alt="ITALIAN" target="display_area">
+          </map>
+        </td>
+        <td>
+          <div class="cusine-map">
+            <iframe src="map_default.html" title="display_area" name="display_area"></iframe>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
 
 
         

@@ -128,42 +128,42 @@ function searchList()
             items.id = "show";
         }
     }
-}
-// Add your filter criteria here
-let filterOptions = {
-    "Cuisine Type": ["Italian", "Chinese", "Indian", "Mexican"],
-    "Cooking Time": ["< 15 mins", "15-30 mins", "30-60 mins", "> 60 mins"],
-    "Diet": ["Vegan", "Vegetarian", "Non-Vegetarian"]
-};
+ }
+// // Add your filter criteria here
+// let filterOptions = {
+//     "Cuisine Type": ["Italian", "Chinese", "Indian", "Mexican"],
+//     "Cooking Time": ["< 15 mins", "15-30 mins", "30-60 mins", "> 60 mins"],
+//     "Diet": ["Vegan", "Vegetarian", "Non-Vegetarian"]
+// };
 
-// Generate filter HTML
-let filterHTML = "";
-for (let [filter, options] of Object.entries(filterOptions)) {
-    filterHTML += `<div class="filter-group">
-        <h3>${filter}</h3>
-        ${options.map(option => `<input type="checkbox" id="${option}" name="${filter}">
-        <label for="${option}">${option}</label>`).join("")}
-    </div>`;
-}
+// // Generate filter HTML
+// let filterHTML = "";
+// for (let [filter, options] of Object.entries(filterOptions)) {
+//     filterHTML += `<div class="filter-group">
+//         <h3>${filter}</h3>
+//         ${options.map(option => `<input type="checkbox" id="${option}" name="${filter}">
+//         <label for="${option}">${option}</label>`).join("")}
+//     </div>`;
+// }
 
-// Update searchList function to include filter logic
-function searchList() {
-    // ...existing code...
+// // Update searchList function to include filter logic
+// function searchList() {
+//     // ...existing code...
 
-    // Show filter options when a search is made
-    if (document.querySelector('input').value !== "") {
-        document.querySelector('#filter_options').innerHTML = filterHTML;
-    } else {
-        document.querySelector('#filter_options').innerHTML = "";
-    }
+//     // Show filter options when a search is made
+//     if (document.querySelector('input').value !== "") {
+//         document.querySelector('#filter_options').innerHTML = filterHTML;
+//     } else {
+//         document.querySelector('#filter_options').innerHTML = "";
+//     }
 
-    // Get selected filters
-    let selectedFilters = {};
-    for (let filter of Object.keys(filterOptions)) {
-        selectedFilters[filter] = [...document.querySelectorAll(`input[name="${filter}"]:checked`)].map(input => input.id);
-    }
+//     // Get selected filters
+//     let selectedFilters = {};
+//     for (let filter of Object.keys(filterOptions)) {
+//         selectedFilters[filter] = [...document.querySelectorAll(`input[name="${filter}"]:checked`)].map(input => input.id);
+//     }
 
-    // Apply filters to your search logic
-    // This will depend on how your recipes are structured
-    // You'll need to check if the recipe matches all selected filters
-}
+//     // Apply filters to your search logic
+//     // This will depend on how your recipes are structured
+//     // You'll need to check if the recipe matches all selected filters
+// }
